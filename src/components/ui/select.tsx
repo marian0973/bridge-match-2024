@@ -21,7 +21,7 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           "bg-white text-sm",
           "focus:outline-none focus:ring-2 focus:ring-blue-500",
           "disabled:opacity-50",
-          className
+          className || ''
         )}
         onChange={e => onChange?.(e.target.value)}
         {...props}
