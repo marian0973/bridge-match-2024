@@ -1,3 +1,5 @@
+import { AuthProvider } from '@/components/providers/auth-provider'
+
 export default function RootLayout({
   children,
 }: {
@@ -10,9 +12,11 @@ export default function RootLayout({
         <meta name="description" content="Encontre parceiros para jogar Bridge" />
       </head>
       <body>
-        <div className="min-h-screen bg-gray-50">
-          {children}
-        </div>
+        <AuthProvider>
+          <div className="min-h-screen bg-gray-50">
+            {children}
+          </div>
+        </AuthProvider>
       </body>
     </html>
   )
